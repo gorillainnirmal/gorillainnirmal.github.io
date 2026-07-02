@@ -1,1 +1,1 @@
-/* Gorilla in Nirmal Styles */
+body{margin:0;font-family:Arial;background:#111;color:#fff}.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;background:linear-gradient(135deg,#000,#222)}h1{font-size:3rem;color:#f5c542}.btn{background:#f5c542;color:#111;padding:12px 20px;border-radius:8px;text-decoration:none}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;padding:20px}.card{background:#1c1c1c;padding:30px;border-radius:12px;text-align:center}.card:hover{transform:translateY(-6px)}
