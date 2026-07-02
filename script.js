@@ -1,3 +1,3 @@
-document.querySelectorAll('.card').forEach(card => {
-  card.onclick = () => alert('More content coming soon!');
-});
+function showMessage() {
+  alert("Working perfectly Commander!");
+}
