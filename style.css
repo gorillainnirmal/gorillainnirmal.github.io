@@ -1,3 +1,8 @@
+/* ==========================================
+   GORILLA IN NIRMAL
+   Premium Style Sheet
+========================================== */
+
 *{
     margin:0;
     padding:0;
@@ -10,22 +15,26 @@ body{
     background:#000;
     color:#fff;
     overflow-x:hidden;
+    line-height:1.6;
 }
 
-/* Header */
+/* ==========================
+   Header
+========================== */
 
 header{
     position:fixed;
     top:0;
     left:0;
     width:100%;
-    padding:20px 8%;
     display:flex;
     justify-content:space-between;
     align-items:center;
+    padding:20px 8%;
     background:rgba(0,0,0,.45);
     backdrop-filter:blur(12px);
     z-index:1000;
+    transition:.4s;
 }
 
 .logo{
@@ -42,26 +51,30 @@ nav{
 nav a{
     color:#fff;
     text-decoration:none;
+    font-size:17px;
     transition:.3s;
 }
 
 nav a:hover{
-    color:#ffd700;
+    color:#FFD700;
 }
 
-/* Hero */
+/* ==========================
+   Hero
+========================== */
 
 .hero{
     height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
     background:
     linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
     url("images/hero.png");
     background-size:cover;
     background-position:center;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
+    background-repeat:no-repeat;
 }
 
 .overlay{
@@ -70,73 +83,83 @@ nav a:hover{
 }
 
 .hero h1{
-    font-size:75px;
+    font-size:78px;
+    font-weight:900;
+    letter-spacing:3px;
     margin-bottom:20px;
 }
 
 .hero p{
     font-size:24px;
     color:#ddd;
-    margin-bottom:40px;
-    line-height:1.6;
+    margin-bottom:45px;
 }
+
+/* ==========================
+   Button
+========================== */
 
 .btn{
     display:inline-block;
-    padding:16px 40px;
-    background:#ffd700;
-    color:#000;
-    text-decoration:none;
+    padding:16px 42px;
     border-radius:50px;
+    text-decoration:none;
+    background:#FFD700;
+    color:#000;
     font-weight:bold;
-    transition:.3s;
+    transition:.35s;
 }
 
 .btn:hover{
-    transform:translateY(-3px);
     background:#fff;
+    transform:translateY(-4px);
 }
 
-/* Sections */
+/* ==========================
+   Sections
+========================== */
 
 section{
-    padding:100px 10%;
+    padding:110px 10%;
     text-align:center;
 }
 
 section h2{
     font-size:42px;
-    margin-bottom:20px;
+    margin-bottom:25px;
 }
 
 section p{
     max-width:850px;
     margin:auto;
-    color:#bbb;
-    line-height:1.8;
+    color:#bfbfbf;
     font-size:18px;
+    line-height:1.9;
 }
 
-/* Cards */
+/* ==========================
+   Services
+========================== */
 
 .cards{
+    margin-top:50px;
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
     gap:30px;
-    margin-top:50px;
 }
 
 .card{
     background:#111;
     padding:40px 30px;
     border-radius:20px;
-    transition:.3s;
     border:1px solid #222;
+    transition:.4s;
 }
 
 .card:hover{
-    transform:translateY(-8px);
-    border-color:#ffd700;
+    transform:translateY(-10px);
+    border-color:#FFD700;
+    box-shadow:0 0 25px rgba(255,215,0,.25);
 }
 
 .card h3{
@@ -144,18 +167,66 @@ section p{
     font-size:24px;
 }
 
-/* Footer */
+.card p{
+    color:#aaa;
+}
+
+/* ==========================
+   Contact
+========================== */
+
+#contact a{
+    margin-top:30px;
+}
+
+/* ==========================
+   Footer
+========================== */
 
 footer{
     background:#111;
-    padding:30px;
     text-align:center;
-    color:#777;
+    padding:30px;
+    color:#888;
 }
 
-/* Mobile */
+/* ==========================
+   Animation
+========================== */
 
-@media(max-width:768px){
+.hidden{
+    opacity:0;
+    transform:translateY(60px);
+    transition:1s;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* ==========================
+   Scrollbar
+========================== */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#000;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#FFD700;
+    border-radius:20px;
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:900px){
 
 header{
     flex-direction:column;
@@ -165,11 +236,11 @@ header{
 nav{
     flex-wrap:wrap;
     justify-content:center;
-    gap:15px;
+    gap:18px;
 }
 
 .hero h1{
-    font-size:42px;
+    font-size:48px;
 }
 
 .hero p{
@@ -181,10 +252,15 @@ section{
 }
 
 section h2{
-    font-size:32px;
+    font-size:34px;
 }
 
 .btn{
     padding:14px 30px;
 }
+
+.logo{
+    text-align:center;
+}
+
 }
