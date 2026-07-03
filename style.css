@@ -1,266 +1,56 @@
-/* ==========================================
-   GORILLA IN NIRMAL
-   Premium Style Sheet
-========================================== */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
+#booking{
+    padding:100px 10%;
+    text-align:center;
 }
 
-body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#000;
-    color:#fff;
-    overflow-x:hidden;
-    line-height:1.6;
+#booking h2{
+    font-size:42px;
+    margin-bottom:15px;
 }
 
-/* ==========================
-   Header
-========================== */
+#booking p{
+    max-width:700px;
+    margin:0 auto 40px;
+    color:#bbb;
+}
 
-header{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
+form{
+    max-width:700px;
+    margin:auto;
     display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 8%;
-    background:rgba(0,0,0,.45);
-    backdrop-filter:blur(12px);
-    z-index:1000;
-    transition:.4s;
+    flex-direction:column;
+    gap:20px;
 }
 
-.logo{
-    font-size:28px;
+form input,
+form select,
+form textarea{
+    padding:16px;
+    border:none;
+    border-radius:12px;
+    background:#1a1a1a;
+    color:white;
+    font-size:16px;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus{
+    outline:2px solid #FFD700;
+}
+
+form button{
+    padding:18px;
+    background:#FFD700;
+    color:black;
+    border:none;
+    border-radius:50px;
+    font-size:18px;
     font-weight:bold;
-    letter-spacing:2px;
-}
-
-nav{
-    display:flex;
-    gap:30px;
-}
-
-nav a{
-    color:#fff;
-    text-decoration:none;
-    font-size:17px;
+    cursor:pointer;
     transition:.3s;
 }
 
-nav a:hover{
-    color:#FFD700;
-}
-
-/* ==========================
-   Hero
-========================== */
-
-.hero{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    background:
-    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
-    url("images/hero.png");
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-}
-
-.overlay{
-    max-width:900px;
-    padding:20px;
-}
-
-.hero h1{
-    font-size:78px;
-    font-weight:900;
-    letter-spacing:3px;
-    margin-bottom:20px;
-}
-
-.hero p{
-    font-size:24px;
-    color:#ddd;
-    margin-bottom:45px;
-}
-
-/* ==========================
-   Button
-========================== */
-
-.btn{
-    display:inline-block;
-    padding:16px 42px;
-    border-radius:50px;
-    text-decoration:none;
-    background:#FFD700;
-    color:#000;
-    font-weight:bold;
-    transition:.35s;
-}
-
-.btn:hover{
-    background:#fff;
-    transform:translateY(-4px);
-}
-
-/* ==========================
-   Sections
-========================== */
-
-section{
-    padding:110px 10%;
-    text-align:center;
-}
-
-section h2{
-    font-size:42px;
-    margin-bottom:25px;
-}
-
-section p{
-    max-width:850px;
-    margin:auto;
-    color:#bfbfbf;
-    font-size:18px;
-    line-height:1.9;
-}
-
-/* ==========================
-   Services
-========================== */
-
-.cards{
-    margin-top:50px;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:30px;
-}
-
-.card{
-    background:#111;
-    padding:40px 30px;
-    border-radius:20px;
-    border:1px solid #222;
-    transition:.4s;
-}
-
-.card:hover{
-    transform:translateY(-10px);
-    border-color:#FFD700;
-    box-shadow:0 0 25px rgba(255,215,0,.25);
-}
-
-.card h3{
-    margin:20px 0;
-    font-size:24px;
-}
-
-.card p{
-    color:#aaa;
-}
-
-/* ==========================
-   Contact
-========================== */
-
-#contact a{
-    margin-top:30px;
-}
-
-/* ==========================
-   Footer
-========================== */
-
-footer{
-    background:#111;
-    text-align:center;
-    padding:30px;
-    color:#888;
-}
-
-/* ==========================
-   Animation
-========================== */
-
-.hidden{
-    opacity:0;
-    transform:translateY(60px);
-    transition:1s;
-}
-
-.show{
-    opacity:1;
-    transform:translateY(0);
-}
-
-/* ==========================
-   Scrollbar
-========================== */
-
-::-webkit-scrollbar{
-    width:10px;
-}
-
-::-webkit-scrollbar-track{
-    background:#000;
-}
-
-::-webkit-scrollbar-thumb{
-    background:#FFD700;
-    border-radius:20px;
-}
-
-/* ==========================
-   Responsive
-========================== */
-
-@media(max-width:900px){
-
-header{
-    flex-direction:column;
-    gap:15px;
-}
-
-nav{
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:18px;
-}
-
-.hero h1{
-    font-size:48px;
-}
-
-.hero p{
-    font-size:18px;
-}
-
-section{
-    padding:80px 8%;
-}
-
-section h2{
-    font-size:34px;
-}
-
-.btn{
-    padding:14px 30px;
-}
-
-.logo{
-    text-align:center;
-}
-
+form button:hover{
+    background:white;
 }
