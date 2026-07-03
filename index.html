@@ -1,35 +1,67 @@
-<section id="booking">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book the Gorilla Mascot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <h2>Book Your Shoot</h2>
+    <div class="booking-container">
+        <h2>🦍 Book the Gorilla Mascot! 🦍</h2>
+        <p>Fill out the details below to check availability for your event.</p>
+        
+        <!-- Form configured to send entries to your email -->
+        <form id="bookingForm" action="https://formsubmit.co/abdulrehan58106@gmail.com" method="POST">
+            
+            <div class="input-group">
+                <label>Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
 
-    <p>
-        Ready to create something amazing? Fill in your details and we'll contact you shortly to confirm your booking.
-    </p>
+            <div class="input-group">
+                <label>Event Address</label>
+                <input type="text" id="address" name="address" placeholder="Where is the event?" required>
+            </div>
 
-    <form action="https://formsubmit.co/abdulrehan58106@gmail.com" method="POST">
+            <div class="input-group">
+                <label>Date of Event</label>
+                <input type="date" id="date" name="date" required>
+            </div>
 
-        <input type="text" name="Name" placeholder="Your Name" required>
+            <div class="input-group">
+                <label>Mobile Number</label>
+                <input type="tel" id="mobile" name="mobile" placeholder="Enter your WhatsApp number" required>
+            </div>
 
-        <input type="tel" name="Phone" placeholder="Phone Number" required>
+            <button type="submit">Book Now (Email & WhatsApp)</button>
+        </form>
+    </div>
 
-        <input type="email" name="Email" placeholder="Email Address" required>
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            const name = document.getElementById('name').value;
+            const address = document.getElementById('address').value;
+            const date = document.getElementById('date').value;
+            const mobile = document.getElementById('mobile').value;
 
-        <select name="Service" required>
-            <option value="">Select Service</option>
-            <option>Photography</option>
-            <option>Videography</option>
-            <option>Drone Shoot</option>
-            <option>Wedding</option>
-            <option>Event Coverage</option>
-            <option>Instagram Reel</option>
-        </select>
+            // Target number with your India country code (91)
+            const myWhatsAppNumber = "917997206501"; 
 
-        <input type="date" name="Booking Date" required>
+            // Text message configuration for WhatsApp
+            const message = `Hello! I want to book the Gorilla Mascot.%0A%0A` +
+                            `*Name:* ${encodeURIComponent(name)}%0A` +
+                            `*Address:* ${encodeURIComponent(address)}%0A` +
+                            `*Date:* ${encodeURIComponent(date)}%0A` +
+                            `*Client Mobile:* ${encodeURIComponent(mobile)}`;
 
-        <textarea name="Message" rows="5" placeholder="Tell us about your project..."></textarea>
+            const whatsappURL = `https://wa.me/${myWhatsAppNumber}?text=${message}`;
 
-        <button type="submit">Book Now</button>
+            // Opens WhatsApp app/web view immediately on submission
+            window.open(whatsappURL, '_blank');
+        });
+    </script>
 
-    </form>
-
-</section>
+</body>
+</html>
