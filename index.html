@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gorilla in Nirmal | Luxury Booking</title>
-    <!-- Tailwind CSS for styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- STABLE ALTERNATIVE TAILWIND LINK (Fixes network/ISP blocking issues) -->
+    <script src="https://unpkg.com/tailwindcss-cdn@3.4.10/tailwindcss.js"></script>
+    
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts: Cormorant Garamond (Luxury Serif) & Inter (Clean Sans) -->
@@ -20,6 +22,7 @@
         }
         body {
             font-family: 'Inter', sans-serif;
+            background-color: #0f0f0f; /* High-end dark solid fallback if image fails */
             background-image: linear-gradient(rgba(15, 15, 15, 0.88), rgba(15, 15, 15, 0.92)), 
                               url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
@@ -32,12 +35,12 @@
 <body class="text-gray-300 min-h-screen flex flex-col justify-between">
 
     <!-- HEADER / NAVIGATION -->
-    <header class="w-full backdrop-blur-md bg-black/40 border-b border-white/5 sticky top-0 z-50">
+    <header class="w-full backdrop-blur-md bg-black bg-opacity-40 border-b border-white border-opacity-5 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
             
             <!-- Logo & Brand Name -->
             <div class="flex items-center space-x-4">
-                <img src="4046.jpg" alt="Gorilla in Nirmal Logo" class="w-12 h-12 rounded-full object-cover border border-white/10 shadow-md">
+                <img src="4046.jpg" alt="Gorilla in Nirmal Logo" class="w-12 h-12 rounded-full object-cover border border-white border-opacity-10 shadow-md">
                 <span class="text-2xl font-luxury tracking-widest uppercase text-white">
                     Gorilla <span class="text-gray-400 font-light italic">In Nirmal</span>
                 </span>
@@ -45,7 +48,7 @@
 
             <!-- Header Social Link -->
             <div class="flex items-center">
-                <a href="https://instagram.com/Gorilla_in_nirmal" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 bg-white/5 hover:bg-white/10 text-white px-4 py-2 rounded-full text-xs tracking-wider uppercase transition duration-300 border border-white/10">
+                <a href="https://instagram.com/Gorilla_in_nirmal" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 bg-white bg-opacity-5 hover:bg-white hover:bg-opacity-10 text-white px-4 py-2 rounded-full text-xs tracking-wider uppercase transition duration-300 border border-white border-opacity-10">
                     <i class="fab fa-instagram text-sm"></i>
                     <span class="hidden sm:inline font-medium">@Gorilla_in_nirmal</span>
                 </a>
@@ -69,7 +72,7 @@
         </div>
 
         <!-- Right Side: Luxury Booking Form -->
-        <div class="w-full lg:w-1/2 max-w-md bg-black/50 border border-white/5 backdrop-blur-2xl rounded-3xl p-8 shadow-2xl relative overflow-hidden">
+        <div class="w-full lg:w-1/2 max-w-md bg-black bg-opacity-50 border border-white border-opacity-5 backdrop-blur-2xl rounded-3xl p-8 shadow-2xl relative overflow-hidden">
             <!-- Decorative top subtle bar -->
             <div class="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-gray-500 to-transparent"></div>
             
@@ -81,7 +84,7 @@
                 <div>
                     <label for="name" class="block text-[10px] font-semibold uppercase tracking-widest text-gray-400 mb-2">Your Name</label>
                     <input type="text" id="name" required 
-                           class="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-white/30 transition duration-200" 
+                           class="w-full bg-white bg-opacity-[0.03] border border-white border-opacity-10 rounded-xl px-4 py-3 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-white focus:border-opacity-30 transition duration-200" 
                            placeholder="e.g., Alexander Mercer">
                 </div>
 
@@ -89,7 +92,7 @@
                 <div>
                     <label for="service" class="block text-[10px] font-semibold uppercase tracking-widest text-gray-400 mb-2">Inquiry Type</label>
                     <select id="service" required
-                            class="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-gray-300 text-sm focus:outline-none focus:border-white/30 transition duration-200 appearance-none">
+                            class="w-full bg-white bg-opacity-[0.03] border border-white border-opacity-10 rounded-xl px-4 py-3 text-gray-300 text-sm focus:outline-none focus:border-white focus:border-opacity-30 transition duration-200 appearance-none">
                         <option value="Residential Design" class="bg-neutral-900 text-white">Modern Residential Design</option>
                         <option value="Consultation" class="bg-neutral-900 text-white">Private Architecture Consultation</option>
                         <option value="Commercial Project" class="bg-neutral-900 text-white">Commercial Venture</option>
@@ -101,14 +104,14 @@
                 <div>
                     <label for="date" class="block text-[10px] font-semibold uppercase tracking-widest text-gray-400 mb-2">Preferred Date</label>
                     <input type="date" id="date" required 
-                           class="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-white/30 transition duration-200">
+                           class="w-full bg-white bg-opacity-[0.03] border border-white border-opacity-10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-white focus:border-opacity-30 transition duration-200">
                 </div>
 
                 <!-- Additional Details Field -->
                 <div>
                     <label for="details" class="block text-[10px] font-semibold uppercase tracking-widest text-gray-400 mb-2">Project Brief / Notes</label>
                     <textarea id="details" rows="3" required 
-                              class="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-white/30 transition duration-200 resize-none" 
+                              class="w-full bg-white bg-opacity-[0.03] border border-white border-opacity-10 rounded-xl px-4 py-3 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-white focus:border-opacity-30 transition duration-200 resize-none" 
                               placeholder="Describe your premium project scope..."></textarea>
                 </div>
 
@@ -124,7 +127,7 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="w-full bg-black/60 border-t border-white/5 backdrop-blur-md py-8">
+    <footer class="w-full bg-black bg-opacity-60 border-t border-white border-opacity-5 backdrop-blur-md py-8">
         <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
             <div class="text-xs text-gray-600 tracking-wider uppercase font-light">
                 &copy; 2026 Gorilla In Nirmal. Private Atelier.
@@ -143,16 +146,13 @@
         function sendToWhatsApp(event) {
             event.preventDefault();
 
-            // Your dynamic WhatsApp phone link setup
             const whatsappNumber = "917997206501"; 
 
-            // Collect form values
             const name = document.getElementById('name').value;
             const service = document.getElementById('service').value;
             const date = document.getElementById('date').value;
             const details = document.getElementById('details').value;
 
-            // Craft a clean, professional luxury message layout
             const message = `✨ *NEW BOOKING INQUIRY* ✨\n\n` +
                             `👤 *Client Name:* ${name}\n` +
                             `💼 *Service:* ${service}\n` +
@@ -160,10 +160,7 @@
                             `📝 *Project Details:* \n"${details}"\n\n` +
                             `— Sent from Gorilla in Nirmal Web Platform`;
 
-            // Encode the text format for URL delivery
             const encodedMessage = encodeURIComponent(message);
-
-            // Open WhatsApp API link
             window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
         }
     </script>
